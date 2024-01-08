@@ -1,0 +1,139 @@
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+#loading-screen,
+#permission-denied-screen,
+#permission-denied-background {
+  background-color: rgb(17 24 39 / 1);
+  background-image: url("/images/gradient.svg"), url("/images/bg-grid-dark.svg");
+  background-repeat: no-repeat, repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Loading screen */
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+#loading-progress-bar {
+  width: 0%;
+  background: rgb(0 98 209 / 1);
+  height: 100%;
+  transition: width 5s ease-out;
+}
+
+/* Permission denied screen */
+
+.permission-denied-text-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.permission-denied-text {
+  width: 400px;
+  max-width: 95%;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.permission-denied-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  width: fit-content;
+
+  &:hover {
+    background-color: #eaeaea;
+  }
+}
+
+#change-filter-button {
+  font-size: 15px;
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  z-index: 2;
+  border-radius: 10px;
+  font-family: Avenir;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid rgb(73, 144, 226);
+  display: block;
+  width: fit-content;
+}
+
+#full-screen-video {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+#lower-video-bar {
+  height: 30vh;
+}
+
+#local-stream-container {
+  position: relative;
+  display: inline-block;
+}
+
+#deepar-screen {
+  position: absolute;
+  z-index: 1;
+  height: 30vh;
+}
+
+.remote-stream-container {
+  display: inline-block;
+}
+
+#remote-streams {
+  height: 100%;
+}
+
+.remote-video {
+  position: absolute;
+  z-index: 1;
+  height: 100% !important;
+  width: 80%;
+  max-width: 500px;
+}
