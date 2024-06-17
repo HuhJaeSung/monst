@@ -1,10 +1,12 @@
 import AgoraRTC from "agora-rtc-sdk-ng";
 import * as deepar from "deepar";
 
-const licenseKey = "your_license_key_goes_here";
-const appId = "**appId**";
-const token = "**token**";
-const channel = "**channel name**";
+const licenseKey =
+  "454f2f58fb0318da7929459e8ec3425a39cdaf82061cfb02e899bb7341d22779c30e8aea9246718c";
+const appId = "5a11237b69e2452cb234a5583b8d08ff";
+const token =
+  "007eJxTYBD4/emfw8JZl3bPlDv5YyV3Utzn6r7wNzd+KU9XFeni2bdfgcE00dDQyNg8ycwy1cjE1Cg5ycjYJNHU1MI4ySLFwCIt7bNNQVpDICOD3YMHjIwMEAjiszDkJmbmMTAAABo3Ifk=";
+const channel = "main";
 
 // Log the version. Just in case.
 console.log("Deepar version: " + deepar.version);
@@ -122,7 +124,7 @@ console.log("Agora version: " + AgoraRTC.VERSION);
     var containerId = "#" + streamId + "_container";
     $(containerId).dblclick(function () {
       agoraEngine.setRemoteVideoStreamType(mainStreamId, 1);
-      agoraEngine.setRemoteVideoStreamType(streamId, 0); 
+      agoraEngine.setRemoteVideoStreamType(streamId, 0);
       // play selected container as full screen - swap out current full screen stream
       $(containerId).empty().remove(); // remove the stream's miniView container
       remoteStreams[mainStreamId].videoTrack.stop(); // stop the main video stream playback

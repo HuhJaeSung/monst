@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Agora example of DeepAR Web SDK 
 
 - Go to https://developer.deepar.ai
@@ -14,3 +15,7 @@
   - Run `npm run dev`
   - If the browser doesn't open automatically, open http://localhost:8888
   - Open http://localhost:8888 in another tab or browser to join as a second user
+=======
+# monst
+practice AR Video call
+>>>>>>> 549fca970f6a70840660509402538ecf0d6f277a
