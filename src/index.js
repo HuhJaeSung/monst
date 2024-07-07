@@ -2,10 +2,10 @@ import AgoraRTC from "agora-rtc-sdk-ng";
 import * as deepar from "deepar";
 
 const licenseKey =
-  "454f2f58fb0318da7929459e8ec3425a39cdaf82061cfb02e899bb7341d22779c30e8aea9246718c";
+  "fa3e2ece3c087b6cf66e5c173a003a057c9d5ea69cec9e7e360cf59112cd53dd33360d8276a48e08";
 const appId = "5a11237b69e2452cb234a5583b8d08ff";
 const token =
-  "007eJxTYBD4/emfw8JZl3bPlDv5YyV3Utzn6r7wNzd+KU9XFeni2bdfgcE00dDQyNg8ycwy1cjE1Cg5ycjYJNHU1MI4ySLFwCIt7bNNQVpDICOD3YMHjIwMEAjiszDkJmbmMTAAABo3Ifk=";
+  "007eJxTYBD/eleyei+vYnpLaZaUhQfTi2Nhm6arfvG/8nNKQ82l5AYFBtNEQ0MjY/MkM8tUIxNTo+QkI2OTRFNTC+MkixQDi7S0k9O60hoCGRnUWHVYGBkgEMRnYchNzMxjYAAADZ0eLg==";
 const channel = "main";
 
 // Log the version. Just in case.
@@ -22,6 +22,8 @@ console.log("Agora version: " + AgoraRTC.VERSION);
   // All the effects are in the public/effects folder.
   // Here we define the order of effect files.
   const effectList = [
+    "effects/Bomb.deepar",
+    "effects/three-eye-monster.deepar",
     "effects/ray-ban-wayfarer.deepar",
     "effects/viking_helmet.deepar",
     "effects/MakeupLook.deepar",
